@@ -10,9 +10,9 @@
         :key="icon.name"
         class="mx-auto"
         v-bind="icon"
-        :color="selectedColor"
         :selected-icon="selectedIcon"
-        @update-icon="selectedIcon = $event"
+        :color="selectedColor"
+        @update-icon="$emit('update', { icon: $event })"
       />
     </div>
     <div
@@ -24,7 +24,7 @@
         :key="color"
         :color="color"
         :selected-color="selectedColor"
-        @update="$emit('update', { selectedColor: $event })"
+        @update="$emit('update', { color: $event })"
       />
     </div>
   </div>
@@ -32,6 +32,10 @@
 
 <script>
 export default {
+  props: {
+    selectedColor: { type: String, required: true },
+    selectedIcon: { type: String, required: true },
+  },
   data() {
     return {
       colors: [
@@ -66,15 +70,7 @@ export default {
           name: 'box',
         },
       ],
-      selectedColor: 'white',
-      selectedIcon: 'box',
     }
-  },
-  methods: {
-    getStyle(color) {
-      const size = color === this.selectedColor ? '30px' : '20px'
-      return { backgroundColor: color, width: size, height: size }
-    },
   },
 }
 </script>
@@ -82,12 +78,6 @@ export default {
 <style scoped>
 .color-row {
   height: 35px;
-}
-.color-box {
-  border: 1px solid #777;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
-  border-radius: 5px;
 }
 p {
   font-size: 20px;

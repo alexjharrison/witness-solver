@@ -14,7 +14,7 @@ export default {
       options: {
         rows: 4,
         columns: 4,
-        isAddRemoving: true,
+        tab: 'Grid',
         color: 'aqua',
         icon: 'flux',
       },
