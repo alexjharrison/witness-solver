@@ -26,6 +26,8 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
+
+  components: true,
   /*
    ** Global CSS
    */
@@ -39,7 +41,6 @@ export default {
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
    */
-  components: true,
   /*
    ** Nuxt.js dev-modules
    */
