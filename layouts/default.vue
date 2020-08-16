@@ -7,8 +7,7 @@
 
 <style>
 :root {
-  --box-height: 100px;
-  --box-width: 100px;
+  --box-size: 100px;
 }
 a {
   color: var(--info);

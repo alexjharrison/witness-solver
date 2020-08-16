@@ -2,7 +2,7 @@
   <div class="text-center contents">
     <h3 class="mb-3">Click to add item into box</h3>
     <div
-      class="item-list d-flex align-items-center justify-content-between mb-2 p-3"
+      class="item-list d-flex align-items-center justify-content-between p-3"
     >
       <p class="mb-0">Choose Item:</p>
       <settings-contents-icon

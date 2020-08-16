@@ -12,8 +12,8 @@
         @update="$emit('update', $event)"
       />
     </b-tab>
-    <b-tab title="Modify Walls">
-      <h3 class="my-5 text-center">Click a wall to modify it</h3>
+    <b-tab title="Modify Walls" class="p-5">
+      <h3 class="text-center">Click a wall to modify it</h3>
     </b-tab>
     <b-tab title="Contents"
       ><settings-contents
@@ -21,7 +21,7 @@
         :selected-icon="options.icon"
         @update="$emit('update', $event)"
     /></b-tab>
-    <b-tab class="my-5 text-center" title="Solve">
+    <b-tab class="text-center p-5" title="Solve">
       <h3>Tap a wall to select it</h3>
     </b-tab>
   </b-tabs>
