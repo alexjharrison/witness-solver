@@ -1,6 +1,6 @@
 <template>
   <b-tabs
-    content-class="mt-3"
+    content-class="mt-3 mb-5"
     justified
     class="setttings"
     @input="$emit('update', { tab: tabs[$event] })"

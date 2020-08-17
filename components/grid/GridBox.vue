@@ -44,7 +44,7 @@ export default {
   width: var(--box-size);
   height: var(--box-size);
   margin: auto;
-  font-size: 15vw;
+  font-size: var(--box-size);
   display: flex;
   justify-content: center;
   align-items: center;

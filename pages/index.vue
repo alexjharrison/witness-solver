@@ -63,8 +63,8 @@ export default {
   },
   methods: {
     calcSize() {
-      const maxWidth = window.innerWidth / this.options.columns - 15
-      const maxHeight = (window.innerHeight - 275) / this.options.rows - 20
+      const maxWidth = window.innerWidth / this.options.columns - 18
+      const maxHeight = (window.innerHeight - 325) / this.options.rows - 20
       document.documentElement.style.setProperty(
         '--box-size',
         Math.min(maxWidth, maxHeight) + 'px'

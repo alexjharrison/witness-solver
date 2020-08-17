@@ -1,5 +1,6 @@
 <template>
   <div
+    ref="line"
     class="vertical-line"
     :style="{ backgroundColor, color }"
     @click="handleClick"
@@ -15,6 +16,7 @@ export default {
       text: '',
       backgroundColor: '#ccc',
       color: 'black',
+      touchListener: null,
     }
   },
   mounted() {
@@ -25,7 +27,7 @@ export default {
     })
   },
   methods: {
-    handleClick() {
+    handleClick(event) {
       const { tab, icon, color } = this.$store.state
       if (tab === 'Grid') {
       } else if (tab === 'Modify Walls') {
